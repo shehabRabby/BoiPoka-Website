@@ -1,17 +1,20 @@
 import React from "react";
 
 import { MdStarHalf } from "react-icons/md";
+import { Link } from "react-router";
 
 const Book = ({ singleBook }) => {
     // console.log(singleBook);
-  const { bookName,publisher,category, author, image,rating } = singleBook;
+  const {bookId, bookName,publisher,category, author, image,rating } = singleBook;
 
   return (
     <div className="w-[374px]  p-[20px] rounded-[16px] border border-black/15 flex flex-col justify-between shadow-sm">
 
-      <div className="w-[326px] h-[230px] bg-[#f3f3f3] flex justify-center items-center mx-auto rounded-[8px]">
-        <img src={image} alt="Book Cover" className="w-[134px] h-[166px] object-contain"/>
-      </div>
+      <Link to={`/bookDetails/${bookId}`}>
+       <div className="w-[326px] h-[230px] bg-[#f3f3f3] flex justify-center items-center mx-auto rounded-[8px]">
+         <img src={image} alt="Book Cover" className="w-[134px] h-[166px] object-contain"/>
+       </div>
+      </Link>
 
     
       <div className="flex gap-2 mt-4">
