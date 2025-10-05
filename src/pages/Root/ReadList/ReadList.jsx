@@ -4,6 +4,7 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import { getStoreBook } from "../../../Utilities/addToDB";
 import Book from "../Book/Book";
+import ReadBooks from "../Books/ReadBooks";
 
 const ReadList = () => {
 
@@ -52,7 +53,7 @@ const ReadList = () => {
         <TabPanel>
           <h2 className="mt-10 mb-4 font-semibold">Read Book List {readList.length}</h2>
           {
-            readList.map(bookItem => <Book key={bookItem.bookId} singleBook={bookItem}></Book>)
+            readList.map(bookItem => <ReadBooks key={bookItem.bookId} readBook={bookItem}></ReadBooks>)
           }
         </TabPanel>
         <TabPanel>

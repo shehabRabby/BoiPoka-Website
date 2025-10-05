@@ -1,5 +1,6 @@
 import React, { Suspense, useState } from "react";
 import Book from "../Book/Book";
+import ReadBooks from "./ReadBooks";
 
 const Books = ({ data }) => {
     const[allBooks,setAllBooks] = useState([]);
@@ -16,6 +17,14 @@ const Books = ({ data }) => {
                data.map((singleBook) => <Book key={singleBook.bookID} singleBook={singleBook}></Book>)
             }
           </div>
+        </Suspense>
+
+        <Suspense fallback={<span>ReadList Book Loading...</span>}>
+        <div className="border-1">
+          {
+            data.map((readBook) => <ReadBooks key={readBook.bookID} readBook={readBook}></ReadBooks>)
+          }
+        </div>
         </Suspense>
       
     </div>

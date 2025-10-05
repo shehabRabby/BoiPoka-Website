@@ -12,7 +12,7 @@ const Book = ({ singleBook }) => {
 
       <Link to={`/bookDetails/${bookId}`}>
        <div className="w-[326px] h-[230px] bg-[#f3f3f3] flex justify-center items-center mx-auto rounded-[8px]">
-         <img src={image} alt="Book Cover" className="w-[134px] h-[166px] object-contain"/>
+         <img src={image} alt="Book Cover" className="w-full h-[166px] object-contain"/>
        </div>
       </Link>
 
