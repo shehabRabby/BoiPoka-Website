@@ -5,7 +5,7 @@ import { Link } from "react-router";
 
 const Book = ({ singleBook }) => {
     // console.log(singleBook);
-  const {bookId, bookName,publisher,category, author, image,rating } = singleBook;
+  const {bookId, bookName,category, author, image,rating } = singleBook;
 
   return (
     <div className="w-[374px]  p-[20px] rounded-[16px] border border-black/15 flex flex-col justify-between shadow-sm">
