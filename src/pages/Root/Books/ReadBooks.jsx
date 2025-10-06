@@ -1,7 +1,7 @@
 import React from "react";
 
 const ReadBooks = ({ readBook }) => {
-  const { bookId, bookName, category, author, image, rating,publisher,yearOfPublishing,totalPages } = readBook;
+  const {bookName, category, author, image, rating,publisher,yearOfPublishing,totalPages } = readBook;
   return (
     <div className="flex flex-col md:flex-row bg-white rounded-[16px] shadow-sm border border-gray-300 overflow-hidden p-6 w-full max-w-[1170px] mx-auto transition hover:shadow-md mb-4">
       {/* Book Image */}

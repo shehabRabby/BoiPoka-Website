@@ -19,13 +19,7 @@ const Books = ({ data }) => {
           </div>
         </Suspense>
 
-        <Suspense fallback={<span>ReadList Book Loading...</span>}>
-        <div className="border-1">
-          {
-            data.map((readBook) => <ReadBooks key={readBook.bookID} readBook={readBook}></ReadBooks>)
-          }
-        </div>
-        </Suspense>
+        
       
     </div>
   );

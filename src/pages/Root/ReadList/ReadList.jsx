@@ -52,9 +52,11 @@ const ReadList = () => {
 
         <TabPanel>
           <h2 className="mt-10 mb-4 font-semibold">Read Book List {readList.length}</h2>
-          {
-            readList.map(bookItem => <ReadBooks key={bookItem.bookId} readBook={bookItem}></ReadBooks>)
-          }
+          <div>
+            {
+             readList.map(bookItem => <ReadBooks key={bookItem.bookId} readBook={bookItem}></ReadBooks>)
+            }
+          </div>
         </TabPanel>
         <TabPanel>
           <h2>My WishList</h2>
